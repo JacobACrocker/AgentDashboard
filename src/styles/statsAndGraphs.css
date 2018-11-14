@@ -1,0 +1,21 @@
+.graph {
+  max-width: 500px;
+  max-height: 800px;
+  align-content: center;
+}
+
+.stats { 
+  max-width: 500px;
+  max-height: 800px;
+  align-content: center;
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+.right {
+  margin: auto;
+  padding: 10px;
+}

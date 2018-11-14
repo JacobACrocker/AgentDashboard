@@ -1,0 +1,56 @@
+.App { /*
+  text-align: center; */
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.statsAndGraph {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em; 
+  /*grid-auto-rows: 300px; /*height*/
+  grid-auto-rows: minmax(300px, auto);
+}
+
+.graph {
+  max-width: 800px;
+  max-height: 500px;
+  background: #eee;
+  padding: 1em;
+}
+
+.stats {
+  background: #eee;
+  padding: 1em;
+}
+
+.statsAndGraph{ /*
+  display: flex; */
+  
+}
+
+.center { /*
+  margin: auto;
+  padding: 10px; */
+}
+
