@@ -19,7 +19,7 @@ static defaultProps = {
 
   render() {
     return (
-      <div className='barGraph'>
+      <div>
         <Bar
             data={this.state.data}
             /*width={100}

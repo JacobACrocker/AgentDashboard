@@ -18,16 +18,10 @@
   color: #61dafb;
 }
 
-
-.wrapper {}
-
-
-.statsAndGraph {}
+.grey {
+  background-color: #d4d4d4;
+}
 
 .graph {}
 
 .stats {}
-
-.statsAndGraph{}
-
-.center {}

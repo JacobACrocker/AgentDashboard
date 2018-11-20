@@ -1,13 +1,14 @@
 /* Components */
 
 import React, { Component } from 'react';
+import {Container, Col, Row} from 'reactstrap';
 import BarGraph from './Components/BarGraph.js';
 import PieGraph from './Components/PieGraph.js';
 import PartnerCountStats from './Components/Stats/PartnerCountStats';
 
 
 /*Styling */
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 /*import './styles/statsAndGraphs.css';*/
 
@@ -102,26 +103,27 @@ class App extends Component {
             {this.state.userInfo.agentName}'s Dashboard
           </h1>
         </header>
-        <div className="wrapper">          
-          <div className="border"></div>
-          <div className="dataWrapper">
-            <div className="statsAndGraph">
+        <div className="wrapper">
+          <Container className="container">
+            <Row className="grey mt-3">              
               {/* # of parners by product */}
-              <PartnerCountStats />
-              <BarGraph data={this.state.partnerCountGraphData}/>
-            </div>
-            <div className="statsAndGraph">
+              <Col className='stats p-3'>
+               <PartnerCountStats />
+              </Col>
+              <Col className='barGraph p-3'>
+                <BarGraph data={this.state.partnerCountGraphData}/>
+              </Col>
+            </Row>
+            <Row className="grey mt-3">
               {/* Calls */}
-              <div className='stats'>
+              <Col className='stats p-3'>
                 ***This is info***
-              </div>
-              <PieGraph legendPosition='bottom'/>
-              {/*            
-              response time: <LineGraph />
-              */}              
-            </div>
-          </div>          
-          <div className="border"></div>
+              </Col>
+              <Col className='barGraph p-3'>
+                <PieGraph legendPosition='bottom'/>
+              </Col>            
+            </Row>
+          </Container>
         </div>
       </div>
     );

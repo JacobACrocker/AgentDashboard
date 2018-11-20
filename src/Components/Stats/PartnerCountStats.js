@@ -16,6 +16,7 @@ static defaultProps = {
   render() {
     return (
       <div className='stats' data={this.state.data}>
+        ***This is info***
       </div>
     );
   }
