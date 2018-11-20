@@ -1,5 +1,5 @@
-.App { /*
-  text-align: center; */
+.App { 
+  text-align: center;
 }
 
 
@@ -18,39 +18,16 @@
   color: #61dafb;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-}
 
-.statsAndGraph {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-column-gap: 1em;
-  grid-row-gap: 1em; 
-  /*grid-auto-rows: 300px; /*height*/
-  grid-auto-rows: minmax(300px, auto);
-}
+.wrapper {}
 
-.graph {
-  max-width: 800px;
-  max-height: 500px;
-  background: #eee;
-  padding: 1em;
-}
 
-.stats {
-  background: #eee;
-  padding: 1em;
-}
+.statsAndGraph {}
 
-.statsAndGraph{ /*
-  display: flex; */
-  
-}
+.graph {}
 
-.center { /*
-  margin: auto;
-  padding: 10px; */
-}
+.stats {}
 
+.statsAndGraph{}
+
+.center {}

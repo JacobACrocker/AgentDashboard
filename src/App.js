@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import BarGraph from './Components/BarGraph.js';
 import PieGraph from './Components/PieGraph.js';
+import PartnerCountStats from './Components/Stats/PartnerCountStats';
 
 
 /*Styling */
@@ -26,7 +27,7 @@ class App extends Component {
     /* Ajax calls here */
     this.setState({
       userInfo:{
-        agentName: 'Jacob'
+        agentName: 'Jacob',
       }, 
       partnerCountGraphData:{
         labels:['Gametime','Splash','Corn'],
@@ -102,13 +103,11 @@ class App extends Component {
           </h1>
         </header>
         <div className="wrapper">          
-          <div classname="border"></div>
+          <div className="border"></div>
           <div className="dataWrapper">
             <div className="statsAndGraph">
               {/* # of parners by product */}
-              <div className='stats'>
-                ***This is info***
-              </div>
+              <PartnerCountStats />
               <BarGraph data={this.state.partnerCountGraphData}/>
             </div>
             <div className="statsAndGraph">
@@ -122,7 +121,7 @@ class App extends Component {
               */}              
             </div>
           </div>          
-          <div classname="border"></div>
+          <div className="border"></div>
         </div>
       </div>
     );

@@ -30,7 +30,7 @@ static defaultProps = {
 
   render() {
     return (
-      <div className='graph center'>
+      <div className='pieGraph'>
         <Pie
             data={this.state.chartData}
             /*width={100}
