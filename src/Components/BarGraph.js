@@ -3,13 +3,7 @@ import {Bar} from "react-chartjs-2";
 
 
 class BarGraph extends React.Component {
-  constructor (props){
-    super(props);
-    this.state = {
-      data: props.data
-    }
-  }
-
+ 
 
 static defaultProps = {
   displayTitle: true,
@@ -21,14 +15,14 @@ static defaultProps = {
     return (
       <div>
         <Bar
-            data={this.state.data}
+            data={this.props.data}
             /*width={100}
             height={50} */
             options={{
               /*maintainAspectRatio: false*/
               title:{
                 display: this.props.displayTitle,
-                text: '# of partners by product',
+                text: this.props.data.graphTitle,
                 fontSize: 25,
               },
               legend:{
@@ -41,7 +35,7 @@ static defaultProps = {
               },
               layout:{
                 padding:{
-                  left: 50,
+                  left: 0,
                   right: 0,
                   bottom: 0,
                   top: 0,

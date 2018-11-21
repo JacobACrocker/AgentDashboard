@@ -1,22 +1,12 @@
 import React from "react";
 
-
-class PartnerCountStats extends React.Component {
-  constructor (props){
-    super(props);
-    this.state = {
-      data: props.data
-    }
-  }
-
-
-static defaultProps = {
-}
-
+class PartnerCountStats extends React.Component { 
+ 
   render() {
     return (
-      <div className='stats' data={this.state.data}>
-        ***This is info***
+      <div>
+        <h4>Partner Count by Product</h4>
+        {this.props.data.labels.map((label, i) => <div key={i}>Partner {i+1}: {label}</div>)}
       </div>
     );
   }

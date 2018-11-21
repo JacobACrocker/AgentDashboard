@@ -18,35 +18,41 @@ class App extends Component {
   state = {
     userInfo:{},
     partnerCountGraphData:{},
+    outboundCallsData:{},
+    foo: '',
   }
   
   componentWillMount(){
-    this.getChartData();
+    this.getData();
   }
 
-  getChartData(){
+  getData(){
     /* Ajax calls here */
     this.setState({
+      foo: 'bars',
       userInfo:{
-        agentName: 'Jacob',
+        name: 'Jacob',
+        age: 25,
       }, 
       partnerCountGraphData:{
+        graphTitle: '# of partners by product',
         labels:['Gametime','Splash','Corn'],
         datasets:[{
-          label:'Count',
+          label: 'Count',
           data:[500, 250, 125],
           backgroundColor:[
             'rgba(255, 99, 132, 0.6)',
             'rgba(255, 99, 132, 0.6)',
             'rgba(255, 99, 132, 0.6)',            
-          ]
+          ],
         }]
       },
       outboundCallsData:{
-        labels:['Gametime','Splash','Corn'],
+        graphTitle: '# of calls placed',
+        labels:['12 pm','1 pm','2 pm'],
         datasets:[{
-          label:'Count',
-          data:[500, 250, 125],
+          label:'Calls made',
+          data:[15, 20, 10],
         backgroundColor:[
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
@@ -100,27 +106,27 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>
-            {this.state.userInfo.agentName}'s Dashboard
+            {this.state.userInfo.name}'s Dashboard
           </h1>
         </header>
         <div className="wrapper">
           <Container className="container">
-            <Row className="grey mt-3">              
+            <Row className="m-1 mt-3">              
               {/* # of parners by product */}
-              <Col className='stats p-3'>
-               <PartnerCountStats />
+              <Col className='stats grey m-1' id='partnerCount'>
+                <PartnerCountStats user={this.state.userInfo} data={this.state.partnerCountGraphData}/>
               </Col>
-              <Col className='barGraph p-3'>
+              <Col className='barGraph grey m-1'>
                 <BarGraph data={this.state.partnerCountGraphData}/>
               </Col>
             </Row>
-            <Row className="grey mt-3">
+            <Row className="m-1">
               {/* Calls */}
-              <Col className='stats p-3'>
+              <Col className='stats grey m-1'>
                 ***This is info***
               </Col>
-              <Col className='barGraph p-3'>
-                <PieGraph legendPosition='bottom'/>
+              <Col className='pieGraph grey m-1'>
+                <PieGraph data={this.state.outboundCallsData} foo={this.state.foo}/>
               </Col>            
             </Row>
           </Container>
