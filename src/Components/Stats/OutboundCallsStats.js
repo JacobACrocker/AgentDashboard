@@ -1,11 +1,11 @@
 import React from "react";
 
-class PartnerCountStats extends React.Component { 
+class OutboundCallsStats extends React.Component { 
  
   render() {
     return (
       <div>
-        <h4>Partner Count by Product</h4>
+        <h4>Outbound Calls</h4>
         {/*iterats over the entire array and produces an unordered list
         {this.props.data.labels.map((label, i) => <div key={i}>Partner {i+1}: {label}</div>)}*/}
         <p>
@@ -18,4 +18,4 @@ class PartnerCountStats extends React.Component {
   }
 }
 
-export default PartnerCountStats;
+export default OutboundCallsStats;

@@ -5,6 +5,7 @@ import {Container, Col, Row} from 'reactstrap';
 import BarGraph from './Components/BarGraph.js';
 import PieGraph from './Components/PieGraph.js';
 import PartnerCountStats from './Components/Stats/PartnerCountStats';
+import OutboundCallsStats from './Components/Stats/OutboundCallsStats';
 
 
 /*Styling */
@@ -114,7 +115,7 @@ class App extends Component {
             <Row className="m-1 mt-3">              
               {/* # of parners by product */}
               <Col className='stats grey m-1' id='partnerCount'>
-                <PartnerCountStats user={this.state.userInfo} data={this.state.partnerCountGraphData}/>
+                <PartnerCountStats data={this.state.partnerCountGraphData}/>
               </Col>
               <Col className='barGraph grey m-1'>
                 <BarGraph data={this.state.partnerCountGraphData}/>
@@ -123,7 +124,7 @@ class App extends Component {
             <Row className="m-1">
               {/* Calls */}
               <Col className='stats grey m-1'>
-                ***This is info***
+                <OutboundCallsStats data={this.state.outboundCallsData}/>
               </Col>
               <Col className='pieGraph grey m-1'>
                 <PieGraph data={this.state.outboundCallsData} foo={this.state.foo}/>
